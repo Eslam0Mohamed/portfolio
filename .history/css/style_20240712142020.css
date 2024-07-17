@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    display: inline-block;
+    font: inherit;
+
+}
+button{
+    back
+}
+ul,ol{
+    list-style: none;
+}
