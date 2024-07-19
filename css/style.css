@@ -79,6 +79,9 @@ html:has(.toggle__checkbox:checked){
     --color-input-border: var(--color-white);
   
 }
+.download{
+    color: #000;
+}
 html:has(.toggle__checkbox:checked) .download{
     color: #fff;
 }
@@ -152,7 +155,7 @@ body ,[type=submit]{
 
 .container {
     display: grid;
-    row-gap: 100px;
+    row-gap: 13rem;
     margin: 0 auto;
     max-width: var(--container-width);
     /* background-color: #ff0000; */
@@ -173,7 +176,9 @@ body ,[type=submit]{
     align-items: start;
     position: relative;
 }
-
+.section--with--bg{
+    padding: 11rem 0;
+}
 .section--with--bg::before{
     content: "";
     position: absolute;
@@ -522,4 +527,58 @@ color:#ff0000;
 
 }
 
-
+/* resposive design  */
+@media (max-width:1000px) {
+    html{
+        font-size: 8px;
+    }
+}
+@media (max-width:800px){
+    .container{
+        row-gap: 8rem;
+    }
+    .section{
+        grid-template-columns: 1fr;
+    }
+    .bio__pic-content
+    {
+        grid-row: 1;
+        justify-self: center;
+        margin-bottom: 40px;
+    }
+    .list__skills{
+        grid-template-columns: repeat(2,1fr)
+    }
+    .projects__main{
+        row-gap: 6rem;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .projects__data:nth-of-type(2){
+        order: 1;
+    }
+    .clients__opinions{
+        font-size: 24px;
+    }
+    .contact{
+        row-gap: 6rem;
+    }
+    .form__contact{
+        order: -1;
+    }
+    .video__bg{
+        height: 100vh;
+    }
+}
+@media (max-width:800px){
+    .bio__pic{
+        width: 100%;
+    }
+    .section--with--bg{
+        
+    }
+    .video__bg{
+        height: 100vh;
+    }
+}
+/*end resposive design  */
