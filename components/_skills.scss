@@ -1,0 +1,26 @@
+.skills {
+    display: grid;
+    grid-template-columns: auto;
+    /* background-color: var(--color-grey); */
+    padding: 30px;
+
+}
+
+.list__skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 5rem;
+
+
+}
+
+.skills__title {
+    font-size: var(--font-size-38);
+
+}
+
+.years {
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+}

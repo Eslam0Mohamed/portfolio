@@ -1,0 +1,125 @@
+@media (max-width:1000px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:800px) {
+    .container {
+        row-gap: 8rem;
+    }
+
+    .section {
+        grid-template-columns: 1fr;
+    }
+
+    .bio__pic-content {
+        grid-row: 1;
+        justify-self: center;
+        margin-bottom: 40px;
+    }
+
+    .list__skills {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .projects__main {
+        row-gap: 6rem;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .projects__data:nth-of-type(2) {
+        order: 1;
+    }
+
+    .clients__opinions {
+        font-size: 24px;
+    }
+
+    .contact {
+        row-gap: 6rem;
+    }
+
+    .form__contact {
+        order: -1;
+    }
+
+    .video__bg {
+        height: 100vh;
+    }
+}
+
+@media (max-width:550px) {
+    .header {
+        padding: 0;
+    }
+
+    .header::before {
+        z-index: 0;
+    }
+
+    .bio__pic {
+        width: 100%;
+    }
+    .video__bg {
+        height: 100vh;
+    }
+
+
+
+    .menu__label {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 0;
+        align-self: center;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .menu__bar {
+        height: 0.3rem;
+        width: 40px;
+        background-color: var(--color-text);
+        transition: var(--transition-timing);
+    }
+    .burger__menu__checkbox:checked ~ .navigation {
+        top: 100%;
+      }
+
+    .header:has(.burger__menu__checkbox:checked) .menu__bar:nth-child(1) {
+        transform: translateY(10px) rotate(40deg);
+    }
+
+    .header:has(.burger__menu__checkbox:checked) .menu__bar:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .header:has(.burger__menu__checkbox:checked) .menu__bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-40deg);
+    }
+    .navigation__link{
+        font-size: 12px;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 0;
+        padding: 3rem 0;
+        width: 100%;
+        width: 100vw;
+        border-bottom: 0.1rem solid var(--color-text);
+        z-index: -1;
+    }
+
+    .toggle {
+        z-index: 1;
+        padding: 3rem 0; 
+        
+    }
+    .navigation__list{
+        justify-content: center;
+    }
+}

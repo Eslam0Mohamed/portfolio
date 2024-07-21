@@ -1,0 +1,36 @@
+.projects__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 74px;
+    row-gap: 75px;
+}
+
+.projects__main img {
+    box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+}
+
+.projects__data {
+    align-self: center;
+}
+
+.projects__discription {
+    line-height: 1.5;
+}
+
+.projects__link {
+    color: var(--color-darker-blue);
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-medium);
+    margin-top: 2.3rem;
+}
+
+.projects__link::after {
+    content: "";
+    background-image: url("../images/external-icon.png");
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 0.6rem;
+}

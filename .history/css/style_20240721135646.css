@@ -1,0 +1,216 @@
+html:has(.toggle__checkbox:checked) {
+    --color-background: var(--color-black);
+    --color-text: var(--color-white);
+    --color-box-img: var(--color-green);
+    --color-link-bg: var(--color-green);
+    --color-grey: #080808;
+    --color-input-border: var(--color-white);
+
+}
+
+
+html:has(.toggle__checkbox:checked) .download {
+    color: #fff;
+}
+
+.container:has(.bio:target) .navigation__bio {
+    color: var(--color-dark-blue);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container:has(.skills:target) .navigation__Skills {
+    color: var(--color-dark-blue);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container:has(.media:target) .navigation__Media {
+    color: var(--color-dark-blue);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container:has(.projects:target) .navigation__Projects {
+    color: var(--color-dark-blue);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container:has(.clients:target) .navigation__Clients {
+    color: var(--color-dark-blue);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container:has(.contact:target) .navigation__Contact {
+    color: var(--color-dark-blue);
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* reset  */
+
+/* end reset */
+/* start header  */
+
+/* End toggle  */
+
+/* end header  */
+
+/* start bio  */
+
+
+/* end bio  */
+
+
+/* start skills */
+
+/* end skills */
+
+/* start media  */
+
+/* end media  */
+
+/* start projects  */
+
+/* end projects  */
+/* clients  */
+
+
+/* end clients  */
+/* start contact   */
+
+
+/* end contact   */
+
+/* footer */
+x
+/* end footer  */
+
+/* resposive design  */
+@media (max-width:1000px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:800px) {
+    .container {
+        row-gap: 8rem;
+    }
+
+    .section {
+        grid-template-columns: 1fr;
+    }
+
+    .bio__pic-content {
+        grid-row: 1;
+        justify-self: center;
+        margin-bottom: 40px;
+    }
+
+    .list__skills {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .projects__main {
+        row-gap: 6rem;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .projects__data:nth-of-type(2) {
+        order: 1;
+    }
+
+    .clients__opinions {
+        font-size: 24px;
+    }
+
+    .contact {
+        row-gap: 6rem;
+    }
+
+    .form__contact {
+        order: -1;
+    }
+
+    .video__bg {
+        height: 100vh;
+    }
+}
+
+@media (max-width:550px) {
+    .header {
+        padding: 0;
+    }
+
+    .header::before {
+        z-index: 0;
+    }
+
+    .bio__pic {
+        width: 100%;
+    }
+    .video__bg {
+        height: 100vh;
+    }
+
+
+
+    .menu__label {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 0;
+        align-self: center;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .menu__bar {
+        height: 0.3rem;
+        width: 40px;
+        background-color: var(--color-text);
+        transition: var(--transition-timing);
+    }
+    .burger__menu__checkbox:checked ~ .navigation {
+        top: 100%;
+      }
+
+    .header:has(.burger__menu__checkbox:checked) .menu__bar:nth-child(1) {
+        transform: translateY(10px) rotate(40deg);
+    }
+
+    .header:has(.burger__menu__checkbox:checked) .menu__bar:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .header:has(.burger__menu__checkbox:checked) .menu__bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-40deg);
+    }
+    .navigation__link{
+        font-size: 12px;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 0;
+        padding: 3rem 0;
+        width: 100%;
+        width: 100vw;
+        border-bottom: 0.1rem solid var(--color-text);
+        z-index: -1;
+    }
+
+    .toggle {
+        z-index: 1;
+        padding: 3rem 0;
+    }
+    .navigation__list{
+        justify-content: center;
+    }
+}
+
+/*end resposive design  */
